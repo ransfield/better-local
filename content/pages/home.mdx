@@ -1,26 +1,303 @@
 <Hero
-  title="High-quality work, clear pricing, and fast scheduling."
-  subtitle="Use this starter to build polished 3-5 page sites quickly. Edit content in MDX, reuse blocks, and ship via Vercel previews."
-  primaryCta={{ label: 'Get a quote', href: '/contact' }}
-  secondaryCta={{ label: 'View services', href: '/services' }}
+  eyebrow="BetterLocal"
+  title="You've Tried Everything."
+  subtitle={`More channels. More effort. More noise.\n\nNothing sticks.\n\nBetterLocal helps local businesses launch a clear website that turns visitors into real calls and quote requests.`}
+  tone="brand"
+  primaryCta={{ label: 'Book a Local Presence Audit', href: '/contact' }}
+  secondaryCta={{ label: 'See examples', href: '/examples' }}
 />
 
-<Section>
-## What we do
+<Section tone="dark" spacing="statement">
+> "You don't need a bigger website. You need a clearer one."
+</Section>
 
-<FeatureGrid
-  items={[
-    { title: 'Service one', body: 'Short, specific description of the outcome.' },
-    { title: 'Service two', body: 'Another clear benefit with local relevance.' },
-    { title: 'Service three', body: 'A third offering with a strong CTA nearby.' }
+<Section tone="light" size="wide" className="bg-neutral-100">
+<div className="not-prose">
+  <h2 className="font-display text-3xl font-semibold leading-tight tracking-tight text-[#06514d] md:text-4xl">
+    Does this sound like you?
+  </h2>
+  <p className="mt-5 max-w-3xl text-base leading-relaxed text-neutral-800 md:text-lg">
+    You're doing everything you can to grow online. You have been at this long enough to know it should not be this hard.
+  </p>
+
+  <div className="mt-10 grid gap-5 md:grid-cols-2">
+    <div className="rounded-2xl border border-neutral-200/60 bg-neutral-50 p-6 shadow-sm">
+      <p className="text-sm font-semibold text-neutral-700">You've tried the</p>
+      <p className="mt-1 font-display text-base font-semibold leading-tight text-[#0d5753]">Tactics</p>
+      <div className="mt-5 h-px w-full bg-neutral-200" />
+      <p className="mt-5 text-sm font-semibold leading-tight text-neutral-900">Sound familiar?</p>
+      <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-relaxed text-neutral-600">
+        <li>Spent money on ads while costs kept climbing</li>
+        <li>Hired outside help that did not deliver</li>
+        <li>Launched updates that did not convert</li>
+        <li>Changed tools, copy, and offers with no consistent lift</li>
+      </ul>
+    </div>
+    <div className="rounded-2xl border border-neutral-200/60 bg-neutral-50 p-6 shadow-sm">
+      <p className="text-sm font-semibold text-neutral-700">You've felt the</p>
+      <p className="mt-1 font-display text-base font-semibold leading-tight text-[#0d5753]">Frustration</p>
+      <div className="mt-5 h-px w-full bg-neutral-200" />
+      <p className="mt-5 text-sm font-semibold leading-tight text-neutral-900">Is this you?</p>
+      <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-relaxed text-neutral-600">
+        <li>Working hard without consistent enquiries</li>
+        <li>Unsure what to fix first and what to ignore</li>
+        <li>Careful with spend because cash flow is tight</li>
+        <li>Worried that growth still feels random</li>
+      </ul>
+      <p className="mt-4 text-sm italic leading-relaxed text-neutral-600">
+        And underneath it all: "What if we're just missing something obvious?"
+      </p>
+    </div>
+  </div>
+</div>
+</Section>
+
+<Section tone="dark" spacing="statement">
+> "Here's what trips most local websites up."
+</Section>
+
+<Section tone="light" size="wide">
+## The Fog
+
+<div className="not-prose grid gap-4 md:grid-cols-[1.4fr_1fr]">
+  <div className="rounded-2xl border border-neutral-200/70 bg-white p-7 shadow-sm">
+    <p className="text-xs font-medium uppercase tracking-[0.18em] text-neutral-500">What happens</p>
+    <p className="mt-4 text-base leading-relaxed text-neutral-700">
+      Most visitors do not leave because your service is weak. They leave because your website is unclear.
+    </p>
+    <p className="mt-3 text-base leading-relaxed text-neutral-700">
+      If they cannot understand your offer and next step quickly, they move on.
+    </p>
+    <ul className="mt-5 space-y-2 text-base leading-relaxed text-neutral-700">
+      <li>- unclear message</li>
+      <li>- unclear proof</li>
+      <li>- unclear action</li>
+    </ul>
+  </div>
+  <div className="rounded-2xl border border-neutral-900 bg-neutral-950 p-7 text-white shadow-sm">
+    <p className="text-xs font-medium uppercase tracking-[0.18em] text-neutral-400">What customers think</p>
+    <p className="mt-4 font-display text-2xl leading-tight md:text-3xl">"I am not sure this is right for me."</p>
+    <p className="mt-4 text-base leading-relaxed text-neutral-300">
+      That one moment of uncertainty is where enquiries disappear.
+    </p>
+  </div>
+</div>
+</Section>
+
+<Section tone="dark" spacing="statement">
+> "What if you could make the next step obvious?"
+</Section>
+
+<Section tone="light" size="wide" className="bg-neutral-100">
+<div className="not-prose">
+  <p className="text-xs font-semibold uppercase tracking-[0.18em] text-neutral-500">Not dozens. Not hundreds. Just 7.</p>
+  <h2 className="mt-4 max-w-4xl font-display text-3xl font-semibold leading-tight tracking-tight text-neutral-900 md:text-4xl">
+    There are only 7 places your local website gets stuck.
+  </h2>
+  <p className="mt-6 max-w-3xl text-base leading-relaxed text-neutral-800 md:text-lg">
+    After helping local businesses launch and improve, we see the same growth blockers repeat. Most websites are stuck in one or more of these:
+  </p>
+
+  <FeatureGrid
+    compact
+    columns={3}
+    items={[
+      { title: 'Visibility Gap', body: 'Customers search for your service, but your business does not show up clearly enough to win the click.' },
+      { title: 'Trust Drop', body: 'Your service is strong, but the website does not communicate credibility fast enough.' },
+      { title: 'Social Dependence', body: 'You can be discovered on social, but you do not own a clear conversion path from visit to enquiry.' },
+      { title: 'Offer Blur', body: 'Visitors cannot quickly understand your services, locations, or why they should choose you.' },
+      { title: 'Action Leak', body: 'People browse but do not act, because the next step is unclear or too easy to ignore.' },
+      { title: 'Data Blindspot', body: 'Without baseline tracking, every decision is guesswork and improvements happen slowly.' },
+      { title: 'Update Friction', body: 'Your setup is hard to maintain, so improvements keep getting delayed and momentum drops.' }
+    ]}
+  />
+</div>
+</Section>
+
+<Section tone="light" spacing="sm">
+When the stuck point is clear, the next action becomes simple.
+</Section>
+
+<Section tone="brand">
+## Most local businesses are stuck in one or two of these points
+
+You do not need a massive rebuild to fix this. You need a practical sequence and a clear first launch.
+</Section>
+
+<Section tone="light" size="wide" className="bg-neutral-100">
+<div className="not-prose text-center">
+  <h2 className="font-display text-3xl font-semibold leading-tight tracking-tight text-[#0d5753] md:text-4xl">
+    What the audit looks like
+  </h2>
+  <p className="mx-auto mt-5 max-w-4xl text-base leading-relaxed text-neutral-700 md:text-lg">
+    No mystery. No complicated process. Just a clear way to see where your website is stuck and what to fix first.
+  </p>
+
+  <div className="mx-auto mt-12 grid max-w-6xl gap-x-10 gap-y-12 md:grid-cols-2">
+    <article>
+      <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-xl border border-neutral-200 bg-neutral-50 text-2xl font-semibold text-[#0d5753]">
+        1
+      </div>
+      <h3 className="mt-6 font-display text-xl font-semibold leading-tight text-[#0d5753] md:text-2xl">
+        Before we meet: We map your current presence
+      </h3>
+      <p className="mt-4 text-base leading-relaxed text-neutral-600 md:text-lg">
+        We review your current website, service pages, and conversion path so the session starts with context, not guesswork.
+      </p>
+    </article>
+
+    <article>
+      <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-xl border border-neutral-200 bg-neutral-50 text-2xl font-semibold text-[#0d5753]">
+        2
+      </div>
+      <h3 className="mt-6 font-display text-xl font-semibold leading-tight text-[#0d5753] md:text-2xl">
+        On the call: We review what matters together
+      </h3>
+      <p className="mt-4 text-base leading-relaxed text-neutral-600 md:text-lg">
+        We walk through your messaging, trust points, and enquiry flow in plain language. You see what is working and where people drop off.
+      </p>
+    </article>
+
+    <article>
+      <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-xl border border-neutral-200 bg-neutral-50 text-2xl font-semibold text-[#0d5753]">
+        3
+      </div>
+      <h3 className="mt-6 font-display text-xl font-semibold leading-tight text-[#0d5753] md:text-2xl">
+        Clarity moment: We identify your stuck point
+      </h3>
+      <p className="mt-4 text-base leading-relaxed text-neutral-600 md:text-lg">
+        By the end, you know exactly which growth blockers are yours. Not a guess, a clear diagnosis.
+      </p>
+    </article>
+
+    <article>
+      <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-xl border border-neutral-200 bg-neutral-50 text-2xl font-semibold text-[#0d5753]">
+        4
+      </div>
+      <h3 className="mt-6 font-display text-xl font-semibold leading-tight text-[#0d5753] md:text-2xl">
+        You leave with: A clear path forward
+      </h3>
+      <p className="mt-4 text-base leading-relaxed text-neutral-600 md:text-lg">
+        You get specific recommendations on what to fix, in what order, and how to move from confusion to consistent enquiries.
+      </p>
+    </article>
+  </div>
+</div>
+</Section>
+
+<Section tone="dark" spacing="statement">
+> "Clarity first. Then launch gets simpler."
+</Section>
+
+<Section tone="light" size="wide">
+## Three ways to get clarity.
+
+Start simple, or go deeper. Either way, you'll know exactly what to focus on next.
+
+<PricingCards
+  plans={[
+    {
+      name: 'The Audit',
+      price: 'Start here',
+      description: 'Find your stuck point',
+      points: ['Current website review', 'Gap identified quickly', 'Clear explanation of what it means', 'Direction on what to fix first'],
+      ctaLabel: 'Book audit',
+      ctaHref: '/contact',
+      note: 'businesses who need a clear first diagnosis'
+    },
+    {
+      name: 'Launch',
+      price: 'Build + go live',
+      description: "See exactly what's going on",
+      points: ['Tailored website build', 'Conversion-focused page structure', 'Direct review of your current flow', 'Specific recommendations on what to fix'],
+      ctaLabel: 'Start launch',
+      ctaHref: '/contact',
+      featured: true,
+      badge: 'Most popular',
+      note: 'owners who want certainty, not guesswork'
+    },
+    {
+      name: 'Custom Support',
+      price: 'Optional ongoing',
+      description: "Let's fix it together",
+      points: ['Done-with-you implementation', 'Focused sprint on your main stuck point', 'Hands-on support for rollout', 'Ongoing help until it is working'],
+      ctaLabel: 'Get in touch',
+      ctaHref: '/contact',
+      note: 'businesses that want expert support through execution'
+    }
   ]}
 />
 </Section>
 
-<Section>
-<CtaBanner
-  title="Ready to talk?"
-  body="Send a message and we will reply quickly with next steps."
-  cta={{ label: 'Contact us', href: '/contact' }}
+<Section tone="light" size="wide">
+## If you've been burned before
+
+<FeatureGrid
+  columns={3}
+  items={[
+    { title: 'No long projects', body: 'We focus on a practical first launch, not endless revisions.' },
+    { title: 'No agency fluff', body: 'Clear scope, direct communication, and concrete next steps.' },
+    { title: 'You stay in control', body: 'You keep ownership of your domain, content, and direction.' }
+  ]}
 />
+</Section>
+
+<Section tone="light" size="wide">
+## Before and after clarity
+
+<div className="not-prose grid gap-4 md:grid-cols-2">
+  <div className="rounded-2xl border border-neutral-200/70 bg-neutral-100 p-6">
+    <h3 className="font-display text-xl font-semibold text-black md:text-2xl">Before clarity</h3>
+    <ul className="mt-4 space-y-2 text-base leading-relaxed text-neutral-700">
+      <li>- no clear site structure</li>
+      <li>- no tracking baseline</li>
+      <li>- no obvious next step for visitors</li>
+    </ul>
+  </div>
+  <div className="rounded-2xl border border-[#05423e] bg-[#065e59] p-6">
+    <h3 className="font-display text-xl font-semibold text-white md:text-2xl">After clarity</h3>
+    <ul className="mt-4 space-y-2 text-base leading-relaxed text-teal-50">
+      <li>- clear digital storefront</li>
+      <li>- clear CTA path</li>
+      <li>- clearer and steadier enquiries</li>
+    </ul>
+  </div>
+</div>
+</Section>
+
+<Section tone="brand" spacing="major">
+<div className="not-prose mx-auto max-w-5xl">
+  <p className="text-center text-xs font-semibold uppercase tracking-[0.18em] text-teal-50/85">FAQs</p>
+  <h2 className="mt-3 text-center font-display text-3xl font-semibold leading-tight tracking-tight text-white md:text-4xl">
+    Questions you might have.
+  </h2>
+
+  <FAQAccordion
+    className="mt-10"
+    items={[
+      { question: 'Do I need a domain first?', answer: 'No. We can help choose and connect one.' },
+      { question: 'How quickly can this launch?', answer: 'Most projects can launch in days when core content is ready.' },
+      { question: 'Do you provide hosting?', answer: 'Yes. We deploy on Vercel and support setup and handover.' },
+      { question: 'Can I update it later?', answer: 'Yes. The structure is built for straightforward updates.' },
+      { question: 'Can you add booking?', answer: 'Yes. We can embed supported booking tools.' },
+      { question: 'What do you need from me?', answer: 'Service list, service area, contact details, and any photos.' }
+    ]}
+  />
+</div>
+</Section>
+
+<Section tone="dark" spacing="hero">
+## Ready to be visible online?
+
+<p className="mb-6">Book a Local Presence Audit and we will map your clearest path to launch.</p>
+
+<div className="not-prose overflow-hidden rounded-2xl border border-neutral-800 bg-neutral-900 p-6 md:p-8">
+  <div className="mb-6">
+    <h3 className="font-display text-xl font-semibold text-white md:text-2xl">Start with a Local Presence Audit</h3>
+    <p className="mt-2 text-base leading-relaxed text-neutral-200">
+      Tell us about your business and we will respond with practical next steps.
+    </p>
+  </div>
+  <ContactForm />
+</div>
 </Section>

@@ -1,22 +1,28 @@
 {
   "business": {
-    "name": "Demo Local Business",
-    "phone": "(555) 123-4567",
-    "phoneRaw": "+15551234567",
-    "address": "123 Main Street\nYourtown, ST 12345",
-    "hours": "Mon-Fri 8am-6pm"
+    "name": "BetterLocal",
+    "phone": "+64 9 555 0123",
+    "phoneRaw": "+6495550123",
+    "address": "New Zealand",
+    "hours": "Mon-Fri 9am-5pm NZT"
   },
   "contact": {
-    "toEmail": "hello@example.com"
+    "toEmail": "hello@betterlocal.co.nz"
   },
   "nav": [
-    { "label": "Services", "href": "/services" },
+    { "label": "Home", "href": "/" },
     { "label": "About", "href": "/about" },
+    { "label": "Examples", "href": "/examples" },
     { "label": "Contact", "href": "/contact" }
   ],
+  "social": {
+    "facebook": "https://facebook.com/betterlocalnz",
+    "instagram": "https://instagram.com/betterlocalnz",
+    "linkedin": "https://linkedin.com/company/betterlocal"
+  },
   "seo": {
-    "siteUrl": "https://example.com",
-    "defaultTitle": "Demo Local Business",
-    "defaultDescription": "A fast, polished marketing site starter for local businesses."
+    "siteUrl": "https://betterlocal.co.nz",
+    "defaultTitle": "BetterLocal | Websites for Businesses Without Websites",
+    "defaultDescription": "BetterLocal builds practical, conversion-focused websites for local businesses without websites. Launch in days, not weeks."
   }
 }
