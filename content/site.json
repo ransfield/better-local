@@ -1,0 +1,22 @@
+{
+  "business": {
+    "name": "Demo Local Business",
+    "phone": "(555) 123-4567",
+    "phoneRaw": "+15551234567",
+    "address": "123 Main Street\nYourtown, ST 12345",
+    "hours": "Mon-Fri 8am-6pm"
+  },
+  "contact": {
+    "toEmail": "hello@example.com"
+  },
+  "nav": [
+    { "label": "Services", "href": "/services" },
+    { "label": "About", "href": "/about" },
+    { "label": "Contact", "href": "/contact" }
+  ],
+  "seo": {
+    "siteUrl": "https://example.com",
+    "defaultTitle": "Demo Local Business",
+    "defaultDescription": "A fast, polished marketing site starter for local businesses."
+  }
+}
