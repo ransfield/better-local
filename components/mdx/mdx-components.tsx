@@ -21,7 +21,7 @@ export const mdxComponents = {
   SplitImage,
   ContactForm,
   h1: (props: any) => (
-    <section className="w-full bg-white">
+    <section className="w-full bg-[var(--color-bg)]">
       <Container size="read" className="py-16">
         <h1 {...props} />
       </Container>

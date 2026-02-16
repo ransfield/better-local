@@ -5,18 +5,15 @@ export function FeatureGrid(props: { items: { title: string; body: string }[]; c
 
   return (
     <div className={cn('grid gap-4', columns === 3 ? 'sm:grid-cols-2 lg:grid-cols-3' : 'sm:grid-cols-2')}>
-      {props.items.map((it, idx) => (
+      {props.items.map((it) => (
         <article
           key={it.title}
-          className={cn(
-            'rounded-2xl border border-neutral-200/60 bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md',
-            idx % 3 === 1 ? 'bg-neutral-50' : ''
-          )}
+          className="card-surface stagger-item p-8"
         >
-          <h3 className="font-display text-base font-semibold leading-tight text-black">
+          <h3 className="font-display text-base font-semibold leading-tight text-[var(--color-dark)]">
             {it.title}
           </h3>
-          <p className="mt-2 text-sm leading-relaxed text-neutral-600">{it.body}</p>
+          <p className="mt-2 text-sm leading-relaxed text-[var(--color-text-secondary)]">{it.body}</p>
         </article>
       ))}
     </div>

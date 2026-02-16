@@ -1,14 +1,21 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Instrument_Serif, Plus_Jakarta_Sans } from 'next/font/google'
 import { SiteHeader } from '@/components/site-header'
 import { SiteFooter } from '@/components/site-footer'
 import { getSite } from '@/lib/site'
 import { buildMetadata } from '@/lib/seo'
 
-const inter = Inter({
+const sans = Plus_Jakarta_Sans({
   subsets: ['latin'],
-  variable: '--font-inter',
+  variable: '--font-sans',
+  display: 'swap'
+})
+
+const display = Instrument_Serif({
+  subsets: ['latin'],
+  variable: '--font-display',
+  weight: ['400'],
   display: 'swap'
 })
 
@@ -25,7 +32,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   const site = await getSite()
   return (
     <html lang="en">
-      <body className={`${inter.variable} bg-white text-neutral-950 antialiased`}>
+      <body className={`${sans.variable} ${display.variable} bg-white text-neutral-950 antialiased`}>
         <SiteHeader site={site} />
         <main className="min-h-[70vh]">{children}</main>
         <SiteFooter site={site} />

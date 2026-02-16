@@ -1,12 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" fill="none">
-  <rect width="1200" height="900" fill="#172554"/>
-  <rect x="72" y="72" width="1056" height="756" rx="40" fill="#1d4ed8" stroke="#3b82f6"/>
-  <rect x="124" y="138" width="560" height="36" rx="12" fill="#fbbf24"/>
-  <rect x="124" y="196" width="620" height="22" rx="11" fill="#eff6ff"/>
-  <rect x="124" y="230" width="560" height="22" rx="11" fill="#bfdbfe"/>
-  <rect x="124" y="290" width="280" height="64" rx="20" fill="#fbbf24"/>
-  <rect x="124" y="394" width="300" height="380" rx="24" fill="#1e3a8a" stroke="#60a5fa"/>
-  <rect x="448" y="394" width="300" height="380" rx="24" fill="#1e40af" stroke="#60a5fa"/>
-  <rect x="772" y="394" width="308" height="380" rx="24" fill="#1d4ed8" stroke="#60a5fa"/>
+  <rect width="1200" height="900" fill="#111111"/>
+  <rect x="72" y="72" width="1056" height="756" rx="40" fill="#262626" stroke="#737373"/>
+  <rect x="124" y="138" width="560" height="36" rx="12" fill="#a3a3a3"/>
+  <rect x="124" y="196" width="620" height="22" rx="11" fill="#f5f5f5"/>
+  <rect x="124" y="230" width="560" height="22" rx="11" fill="#d4d4d4"/>
+  <rect x="124" y="290" width="280" height="64" rx="20" fill="#a3a3a3"/>
+  <rect x="124" y="394" width="300" height="380" rx="24" fill="#1f1f1f" stroke="#737373"/>
+  <rect x="448" y="394" width="300" height="380" rx="24" fill="#262626" stroke="#737373"/>
+  <rect x="772" y="394" width="308" height="380" rx="24" fill="#262626" stroke="#737373"/>
   <text x="124" y="110" fill="#f8fafc" font-size="34" font-family="Arial, Helvetica, sans-serif" font-weight="700">Multi-service layout preview</text>
 </svg>

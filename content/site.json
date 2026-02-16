@@ -11,7 +11,7 @@
   },
   "nav": [
     { "label": "Home", "href": "/" },
-    { "label": "About", "href": "/about" },
+    { "label": "About us", "href": "/about" },
     { "label": "Examples", "href": "/examples" },
     { "label": "Contact", "href": "/contact" }
   ],
@@ -23,6 +23,6 @@
   "seo": {
     "siteUrl": "https://betterlocal.co.nz",
     "defaultTitle": "BetterLocal | Websites for Businesses Without Websites",
-    "defaultDescription": "BetterLocal builds practical, conversion-focused websites for local businesses without websites. Launch in days, not weeks."
+    "defaultDescription": "Better Local helps local businesses get a proper website live in days, not weeks, with preview links for feedback and ongoing improvements that drive calls and quotes."
   }
 }

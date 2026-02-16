@@ -1,5 +1,6 @@
 import { Container } from '@/components/ui/container'
 import { cn } from '@/components/ui/cn'
+import { Reveal } from '@/components/ui/reveal'
 
 type Tone = 'light' | 'dark' | 'brand'
 type Size = 'read' | 'wide'
@@ -13,31 +14,31 @@ export function Section(props: {
   className?: string
 }) {
   const tone = props.tone ?? 'light'
-  const size = props.size ?? 'read'
   const spacing = props.spacing ?? 'normal'
+  const size = props.size ?? (spacing === 'statement' ? 'wide' : 'read')
 
   const toneClass =
     tone === 'dark'
-      ? 'bg-neutral-950 text-white [&_h1]:!text-white [&_h2]:!text-white [&_h3]:!text-white [&_p]:!text-neutral-100/90 [&_li]:!text-neutral-100/85 [&_blockquote]:!border-white [&_blockquote]:!text-white/95 [&_a]:!text-white'
+      ? 'bg-[var(--color-dark)] text-[var(--color-bg)] [&_h1]:!text-[var(--color-bg)] [&_h2]:!text-[var(--color-bg)] [&_h3]:!text-[var(--color-bg)] [&_p]:!text-[var(--color-bg-alt)] [&_li]:!text-[var(--color-bg-alt)] [&_blockquote]:!mx-auto [&_blockquote]:!max-w-5xl [&_blockquote]:!border-0 [&_blockquote]:!px-0 [&_blockquote]:!text-center [&_blockquote]:!font-display [&_blockquote]:!font-normal [&_blockquote]:!tracking-tight [&_blockquote]:!leading-[1.05] [&_blockquote]:!text-[3rem] md:[&_blockquote]:!text-[3.75rem] [&_blockquote]:!text-[rgba(255,255,255,0.92)] [&_blockquote]:whitespace-normal lg:[&_blockquote]:whitespace-nowrap'
       : tone === 'brand'
-        ? 'bg-[#065e59] text-white [&_h1]:!text-white [&_h2]:!text-white [&_h3]:!text-white [&_p]:!text-teal-50/90 [&_li]:!text-teal-50/90 [&_blockquote]:!border-teal-100 [&_blockquote]:!text-teal-50 [&_a]:!text-teal-50'
-        : 'bg-white text-neutral-950'
+        ? 'bg-[var(--color-dark-surface)] text-[var(--color-bg)] [&_h1]:!text-[var(--color-bg)] [&_h2]:!text-[var(--color-bg)] [&_h3]:!text-[var(--color-bg)] [&_p]:!text-[var(--color-bg-alt)] [&_li]:!text-[var(--color-bg-alt)] [&_blockquote]:!mx-auto [&_blockquote]:!max-w-5xl [&_blockquote]:!border-0 [&_blockquote]:!px-0 [&_blockquote]:!text-center [&_blockquote]:!font-display [&_blockquote]:!font-normal [&_blockquote]:!tracking-tight [&_blockquote]:!leading-[1.05] [&_blockquote]:!text-[3rem] md:[&_blockquote]:!text-[3.75rem] [&_blockquote]:!text-[rgba(255,255,255,0.92)] [&_blockquote]:whitespace-normal lg:[&_blockquote]:whitespace-nowrap'
+        : 'bg-[var(--color-bg)] text-[var(--color-text)]'
 
   const spacingClass =
     spacing === 'hero'
-      ? 'py-28'
+      ? 'py-[var(--space-3xl)] md:py-[var(--space-4xl)]'
       : spacing === 'major'
-        ? 'py-24'
+        ? 'py-[var(--space-2xl)] md:py-[var(--space-3xl)]'
         : spacing === 'statement'
-          ? 'py-20'
+          ? 'py-[var(--space-2xl)]'
           : spacing === 'sm'
-            ? 'py-10'
-            : 'py-16'
+            ? 'py-[var(--space-lg)] md:py-[var(--space-xl)]'
+            : 'py-[var(--space-2xl)] md:py-[var(--space-3xl)]'
 
   return (
     <section className={cn('w-full', toneClass, props.className)}>
       <Container size={size} className={spacingClass}>
-        {props.children}
+        <Reveal>{props.children}</Reveal>
       </Container>
     </section>
   )

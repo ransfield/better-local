@@ -1,76 +1,120 @@
-# Examples
-
-<Section tone="dark">
-## Example layouts we can tailor
-
-These are demo layout patterns, not fake client case studies. We tailor each one with your real business details and branding.
-</Section>
+# Website layouts for local businesses
 
 <Section tone="light" size="wide">
-<ImageGallery
-  items={[
-    { src: '/examples/tradie.svg', alt: 'Tradie website layout preview', caption: 'Tradie launch layout' },
-    { src: '/examples/cafe.svg', alt: 'Cafe website layout preview', caption: 'Cafe and food layout' },
-    { src: '/examples/salon.svg', alt: 'Salon website layout preview', caption: 'Salon and wellness layout' },
-    { src: '/examples/home-services.svg', alt: 'Home services website layout preview', caption: 'Home services layout' },
-    { src: '/examples/professional.svg', alt: 'Professional services website layout preview', caption: 'Professional local services layout' },
-    { src: '/examples/multi-service.svg', alt: 'Multi-service business website layout preview', caption: 'Multi-service business layout' }
-  ]}
-/>
+<div className="not-prose max-w-4xl">
+  <h2 className="font-display text-3xl font-semibold leading-tight tracking-tight text-neutral-900 md:text-4xl">
+    Website layouts for local businesses
+  </h2>
+  <p className="mt-5 text-base leading-relaxed text-neutral-700 md:text-lg">
+    Each layout is tailored to a specific type of business. Pick the one closest to yours.
+  </p>
+  <p className="mt-4 text-base leading-relaxed text-neutral-700 md:text-lg">
+    Every business type has different priorities - a plumber needs quote enquiries, a cafe needs hours and a menu, and an accountant needs credibility. These layouts are designed around those differences, then tailored with your real content, branding, and services.
+  </p>
+</div>
 </Section>
 
-<Section tone="brand">
-## Tradie launch layout
+<Section tone="light" size="wide" className="bg-neutral-100">
+<div className="not-prose grid gap-5 md:grid-cols-2">
+  <article className="rounded-2xl border border-neutral-200/70 bg-white p-6 shadow-sm md:p-7">
+    <div className="flex items-center justify-between gap-3">
+      <h3 className="font-display text-xl font-semibold text-neutral-900 md:text-2xl"><span aria-hidden="true" className="mr-2">🔧</span>Tradie launch layout</h3>
+      <span className="rounded-full bg-[var(--color-accent-light)] px-3 py-1 text-xs font-medium text-[var(--color-accent)]">Most popular</span>
+    </div>
+    <p className="mt-4 text-sm leading-relaxed text-neutral-700 md:text-base">
+      Most tradies just need people to find them, see what they do, and call. This layout is built around that.
+    </p>
+    <ul className="mt-4 space-y-2 text-sm leading-relaxed text-neutral-700 md:text-base">
+      <li><strong>Best for:</strong> plumbers, electricians, builders, roofers, painters</li>
+      <li><strong>What you get:</strong> service pages, service area summary, and a quote-focused CTA on every page</li>
+      <li><strong>Result:</strong> clearer trust signals and faster quote enquiries from local search</li>
+    </ul>
+    <a href="/contact?layout=tradie-launch" className="text-link mt-5 inline-flex text-sm font-semibold">
+      Book an audit for this layout ->
+    </a>
+  </article>
 
-- Best for: plumbers, electricians, builders
-- Includes: service pages, service area summary, quote-focused CTA
-- Outcome: clearer trust signals and faster quote enquiries
-</Section>
+  <article className="rounded-2xl border border-neutral-200/70 bg-white p-6 shadow-sm md:p-7">
+    <h3 className="font-display text-xl font-semibold text-neutral-900 md:text-2xl"><span aria-hidden="true" className="mr-2">☕</span>Cafe and food layout</h3>
+    <p className="mt-4 text-sm leading-relaxed text-neutral-700 md:text-base">
+      When someone searches for a cafe, they want hours, location, and what is on offer - not a slideshow. This layout puts the essentials front and centre.
+    </p>
+    <ul className="mt-4 space-y-2 text-sm leading-relaxed text-neutral-700 md:text-base">
+      <li><strong>Best for:</strong> cafes, takeaway spots, bakeries, local eateries</li>
+      <li><strong>What you get:</strong> menu or offer highlights, opening hours, location with map, and easy contact</li>
+      <li><strong>Result:</strong> first-time visitors can decide to come in without digging through pages</li>
+    </ul>
+    <a href="/contact?layout=cafe-and-food" className="text-link mt-5 inline-flex text-sm font-semibold">
+      Book an audit for this layout ->
+    </a>
+  </article>
 
-<Section tone="light">
-## Cafe and food layout
+  <article className="rounded-2xl border border-neutral-200/70 bg-white p-6 shadow-sm md:p-7">
+    <h3 className="font-display text-xl font-semibold text-neutral-900 md:text-2xl"><span aria-hidden="true" className="mr-2">✂️</span>Salon and wellness layout</h3>
+    <p className="mt-4 text-sm leading-relaxed text-neutral-700 md:text-base">
+      Your Instagram brings people in, but when they search your name, they need a real page with services, pricing, and a way to book.
+    </p>
+    <ul className="mt-4 space-y-2 text-sm leading-relaxed text-neutral-700 md:text-base">
+      <li><strong>Best for:</strong> salons, barbers, beauty, wellness, massage</li>
+      <li><strong>What you get:</strong> services overview, pricing guidance, booking-oriented CTAs, and social proof sections</li>
+      <li><strong>Result:</strong> better conversion from social traffic to actual bookings</li>
+    </ul>
+    <a href="/contact?layout=salon-and-wellness" className="text-link mt-5 inline-flex text-sm font-semibold">
+      Book an audit for this layout ->
+    </a>
+  </article>
 
-- Best for: cafes, takeaway spots, local eateries
-- Includes: core offer highlights, opening hours, location/contact clarity
-- Outcome: easier decision-making for first-time visitors
-</Section>
+  <article className="rounded-2xl border border-neutral-200/70 bg-white p-6 shadow-sm md:p-7">
+    <h3 className="font-display text-xl font-semibold text-neutral-900 md:text-2xl"><span aria-hidden="true" className="mr-2">🏠</span>Home services layout</h3>
+    <p className="mt-4 text-sm leading-relaxed text-neutral-700 md:text-base">
+      People searching for home services want to trust you fast. This layout leads with proof and makes it easy to request a quote.
+    </p>
+    <ul className="mt-4 space-y-2 text-sm leading-relaxed text-neutral-700 md:text-base">
+      <li><strong>Best for:</strong> cleaning, landscaping, pest control, property maintenance</li>
+      <li><strong>What you get:</strong> before/after sections, service packages, lead capture form, and trust signals</li>
+      <li><strong>Result:</strong> higher-quality enquiries from people who already know what you offer</li>
+    </ul>
+    <a href="/contact?layout=home-services" className="text-link mt-5 inline-flex text-sm font-semibold">
+      Book an audit for this layout ->
+    </a>
+  </article>
 
-<Section tone="dark">
-## Salon and wellness layout
+  <article className="rounded-2xl border border-neutral-200/70 bg-white p-6 shadow-sm md:p-7">
+    <h3 className="font-display text-xl font-semibold text-neutral-900 md:text-2xl"><span aria-hidden="true" className="mr-2">💼</span>Professional local services layout</h3>
+    <p className="mt-4 text-sm leading-relaxed text-neutral-700 md:text-base">
+      For accountants, lawyers, and consultants, your website needs to do one thing well: make you look credible enough to contact.
+    </p>
+    <ul className="mt-4 space-y-2 text-sm leading-relaxed text-neutral-700 md:text-base">
+      <li><strong>Best for:</strong> accountants, consultants, legal, advisory, financial services</li>
+      <li><strong>What you get:</strong> authority-building sections, clear service descriptions, and a contact-first flow</li>
+      <li><strong>Result:</strong> stronger credibility and more qualified leads who are ready to talk</li>
+    </ul>
+    <a href="/contact?layout=professional-local-services" className="text-link mt-5 inline-flex text-sm font-semibold">
+      Book an audit for this layout ->
+    </a>
+  </article>
 
-- Best for: salons, barbers, beauty, wellness services
-- Includes: services overview, pricing guidance, booking-oriented CTAs
-- Outcome: better conversion from social traffic to bookings
-</Section>
-
-<Section tone="light">
-## Home services layout
-
-- Best for: cleaning, landscaping, pest control
-- Includes: before/after style proof sections, service packages, lead form
-- Outcome: higher-quality enquiries from local search traffic
-</Section>
-
-<Section tone="brand">
-## Professional local services layout
-
-- Best for: accountants, consultants, legal and advisory services
-- Includes: authority-building sections, offer clarity, contact-first flow
-- Outcome: stronger credibility and more qualified leads
-</Section>
-
-<Section tone="light">
-## Multi-service business layout
-
-- Best for: businesses with multiple service lines
-- Includes: structured navigation, grouped offers, scalable page layout
-- Outcome: clearer journeys from homepage to enquiry
+  <article className="rounded-2xl border border-neutral-200/70 bg-white p-6 shadow-sm md:p-7">
+    <h3 className="font-display text-xl font-semibold text-neutral-900 md:text-2xl"><span aria-hidden="true" className="mr-2">🧩</span>Multi-service business layout</h3>
+    <p className="mt-4 text-sm leading-relaxed text-neutral-700 md:text-base">
+      If your business offers more than one type of service, you need a clear structure so visitors do not get lost.
+    </p>
+    <ul className="mt-4 space-y-2 text-sm leading-relaxed text-neutral-700 md:text-base">
+      <li><strong>Best for:</strong> businesses with multiple service lines or locations</li>
+      <li><strong>What you get:</strong> structured navigation, grouped service pages, scalable layout</li>
+      <li><strong>Result:</strong> clearer journeys from homepage to the right enquiry</li>
+    </ul>
+    <a href="/contact?layout=multi-service-business" className="text-link mt-5 inline-flex text-sm font-semibold">
+      Book an audit for this layout ->
+    </a>
+  </article>
+</div>
 </Section>
 
 <Section tone="dark">
 <CtaBanner
-  title="Want one of these tailored to your business?"
-  body="Book a Local Presence Audit and we will recommend the best structure to launch first."
-  cta={{ label: 'Book a Local Presence Audit', href: '/contact' }}
+  title="Not sure which layout fits?"
+  body="Book a Local Presence Audit and we will recommend the right starting point based on your business type, services, and goals."
+  cta={{ label: 'Book a Free Audit', href: '/contact' }}
 />
 </Section>

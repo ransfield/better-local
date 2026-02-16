@@ -7,6 +7,6 @@ export function Container({
   size = 'wide',
   ...props
 }: React.HTMLAttributes<HTMLDivElement> & { size?: ContainerSize }) {
-  const widthClass = size === 'read' ? 'max-w-3xl' : 'max-w-6xl'
+  const widthClass = size === 'read' ? 'max-w-[720px]' : 'max-w-[1120px]'
   return <div className={cn('mx-auto w-full px-6', widthClass, className)} {...props} />
 }

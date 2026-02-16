@@ -6,8 +6,8 @@ const config: Config = {
     extend: {
       container: { center: true, padding: '1rem' },
       fontFamily: {
-        sans: ['var(--font-inter)', 'Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-        display: ['Suiti', 'var(--font-inter)', 'Inter', 'ui-sans-serif', 'system-ui', 'sans-serif']
+        sans: ['var(--font-sans)', 'Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        display: ['var(--font-display)', 'Georgia', 'serif']
       }
     }
   },

@@ -1,10 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" fill="none">
   <rect width="1200" height="900" fill="#111827"/>
   <rect x="72" y="72" width="1056" height="756" rx="40" fill="#1f2937" stroke="#374151"/>
-  <rect x="124" y="138" width="430" height="36" rx="12" fill="#f97316"/>
+  <rect x="124" y="138" width="430" height="36" rx="12" fill="#a3a3a3"/>
   <rect x="124" y="196" width="560" height="22" rx="11" fill="#d1d5db"/>
   <rect x="124" y="230" width="520" height="22" rx="11" fill="#9ca3af"/>
-  <rect x="124" y="290" width="250" height="64" rx="20" fill="#f97316"/>
+  <rect x="124" y="290" width="250" height="64" rx="20" fill="#a3a3a3"/>
   <rect x="124" y="394" width="956" height="380" rx="24" fill="#0f172a" stroke="#334155"/>
   <text x="124" y="110" fill="#f9fafb" font-size="34" font-family="Arial, Helvetica, sans-serif" font-weight="700">Tradie layout preview</text>
 </svg>

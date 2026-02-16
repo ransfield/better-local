@@ -7,6 +7,7 @@ export function Hero(props: {
   subtitle?: string
   primaryCta?: { label: string; href: string }
   secondaryCta?: { label: string; href: string }
+  supportingLine?: string
   eyebrow?: string
   backgroundImage?: string
   tone?: 'light' | 'dark' | 'brand'
@@ -15,29 +16,29 @@ export function Hero(props: {
 
   const toneClass =
     tone === 'dark'
-      ? 'bg-neutral-950 text-white border-neutral-800'
+      ? 'bg-[var(--color-dark)] text-[var(--color-bg)] border-[var(--color-dark-surface)]'
       : tone === 'brand'
-        ? 'bg-[#065e59] text-white border-[#05423e]'
-        : 'bg-white text-black border-neutral-200'
+        ? 'bg-[var(--color-dark-surface)] text-[var(--color-bg)] border-[var(--color-dark-surface)]'
+        : 'bg-[var(--color-bg)] text-[var(--color-text)] border-[var(--color-bg-alt)]'
 
-  const subtitleClass = tone === 'light' ? 'text-neutral-700' : 'text-white/88'
+  const subtitleClass = tone === 'light' ? 'text-[var(--color-text-secondary)]' : 'text-[var(--color-bg-alt)]'
   const overlayClass = props.backgroundImage
     ? tone === 'light'
-      ? 'bg-white/85'
-      : 'bg-black/45'
+      ? 'bg-white/68'
+      : 'bg-[rgba(26,26,25,0.45)]'
     : tone === 'brand'
-      ? 'bg-[linear-gradient(118deg,rgba(6,46,43,0.7)_0%,rgba(8,73,68,0.55)_48%,rgba(9,84,78,0.68)_100%)]'
+      ? 'bg-[linear-gradient(118deg,rgba(20,20,20,0.7)_0%,rgba(38,38,38,0.58)_50%,rgba(17,17,17,0.72)_100%)]'
       : tone === 'dark'
         ? 'bg-[radial-gradient(70%_70%_at_20%_15%,rgba(255,255,255,0.10),transparent_58%),radial-gradient(55%_55%_at_85%_0%,rgba(255,255,255,0.08),transparent_48%)]'
         : 'bg-[radial-gradient(75%_70%_at_20%_10%,rgba(0,0,0,0.06),transparent_60%)]'
 
   return (
-    <section className={cn('relative isolate w-full overflow-hidden border-y border-neutral-800', toneClass)}>
+    <section className={cn('relative isolate w-full overflow-hidden border-y border-[var(--color-bg-alt)]', tone === 'light' && 'hero-surface-light', toneClass)}>
       {props.backgroundImage ? (
         <div
           className={cn(
             'absolute inset-0 bg-cover bg-center',
-            tone === 'light' ? 'opacity-20' : 'opacity-45'
+            tone === 'light' ? 'opacity-40' : 'opacity-45'
           )}
           style={{ backgroundImage: `url(${props.backgroundImage})` }}
           aria-hidden="true"
@@ -47,28 +48,31 @@ export function Hero(props: {
       {!props.backgroundImage && tone === 'brand' ? (
         <>
           <div className="absolute inset-y-0 left-[6%] w-[38%] bg-white/10" aria-hidden="true" />
-          <div className="absolute inset-y-0 left-[47%] w-[31%] bg-black/12" aria-hidden="true" />
+          <div className="absolute inset-y-0 left-[47%] w-[31%] bg-[rgba(26,26,25,0.12)]" aria-hidden="true" />
           <div
             className="absolute inset-0 opacity-[0.14] [background-image:linear-gradient(to_right,rgba(255,255,255,0.5)_1px,transparent_1px)] [background-size:52px_52px]"
             aria-hidden="true"
           />
         </>
       ) : null}
-      <Container size="read" className="relative flex min-h-[72vh] flex-col justify-center py-28 text-center">
+      <Container size="read" className="relative flex min-h-[72vh] flex-col justify-center py-[var(--space-3xl)] md:py-[var(--space-4xl)] text-center">
         <div>
-          <p className={cn('text-xs uppercase tracking-widest opacity-70', tone === 'light' ? 'text-neutral-700' : 'text-white')}>
-            {props.eyebrow ?? 'BetterLocal'}
-          </p>
+          {props.eyebrow ? (
+            <p className={cn('text-xs uppercase tracking-widest opacity-70', tone === 'light' ? 'text-neutral-700' : 'text-white')}>
+              {props.eyebrow}
+            </p>
+          ) : null}
           <h1
             className={cn(
-              'mt-4 font-display text-5xl font-semibold leading-[1.05] tracking-tight md:text-6xl',
-              tone === 'light' ? 'text-black' : 'text-white'
+              'mx-auto max-w-[680px] font-display font-normal leading-[1.05] tracking-[-0.03em] [font-size:clamp(40px,5vw,64px)]',
+              props.eyebrow ? 'mt-4' : 'mt-0',
+              tone === 'light' ? 'text-[var(--color-dark)]' : 'text-[var(--color-bg)]'
             )}
           >
             {props.title}
           </h1>
           {props.subtitle ? (
-            <p className={cn('mx-auto mt-8 max-w-2xl whitespace-pre-line text-base leading-relaxed md:text-lg', subtitleClass)}>
+            <p className={cn('mx-auto mt-8 max-w-[680px] whitespace-pre-line text-base leading-relaxed md:text-lg', subtitleClass)}>
               {props.subtitle}
             </p>
           ) : null}
@@ -77,7 +81,12 @@ export function Hero(props: {
           {props.primaryCta ? (
             <Link
               href={props.primaryCta.href}
-              className="inline-flex items-center justify-center rounded-md bg-[#d8e2b8] px-8 py-4 text-lg font-semibold text-[#11453f] no-underline transition hover:bg-[#ccd7a8]"
+              className={cn(
+                'btn-primary inline-flex items-center justify-center no-underline',
+                tone === 'light'
+                  ? ''
+                  : '!bg-[#ebebd5] !text-[#004943] hover:!bg-[#dfdfc7]'
+              )}
             >
               {props.primaryCta.label}
             </Link>
@@ -86,14 +95,21 @@ export function Hero(props: {
             <Link
               href={props.secondaryCta.href}
               className={cn(
-                'inline-flex items-center justify-center px-1 py-1 text-base font-medium no-underline',
-                tone === 'light' ? 'text-neutral-900' : 'text-white'
+                'btn-secondary inline-flex items-center justify-center no-underline',
+                tone === 'light'
+                  ? ''
+                  : '!border-[var(--color-bg-alt)] !text-[var(--color-bg)] hover:!bg-white/10 hover:!text-[var(--color-bg)]'
               )}
             >
               {props.secondaryCta.label}
             </Link>
           ) : null}
         </div>
+        {props.supportingLine ? (
+          <p className={cn('mx-auto mt-4 max-w-2xl text-sm leading-relaxed', tone === 'light' ? 'text-[var(--color-text-secondary)]' : 'text-[var(--color-bg-alt)]')}>
+            {props.supportingLine}
+          </p>
+        ) : null}
       </Container>
     </section>
   )
