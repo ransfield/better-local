@@ -1,0 +1,11 @@
+{
+  "extends": [
+    "vercel-labs/agent-skills"
+  ],
+  "skills": [
+    "vercel-react-best-practices",
+    "web-design-guidelines",
+    "agent-browser",
+    "seo-audit"
+  ]
+}

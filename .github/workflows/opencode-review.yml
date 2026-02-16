@@ -1,0 +1,64 @@
+name: OpenCode Review
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+
+jobs:
+  review:
+    if: ${{ !github.event.pull_request.draft }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install OpenCode CLI
+        run: npm install -g opencode-ai@latest
+
+      - name: Verify model credential is present
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          GOOGLE_GENERATIVE_AI_API_KEY: ${{ secrets.GOOGLE_GENERATIVE_AI_API_KEY }}
+        run: |
+          if [[ -z "${ANTHROPIC_API_KEY}" && -z "${OPENAI_API_KEY}" && -z "${GOOGLE_GENERATIVE_AI_API_KEY}" ]]; then
+            echo "No provider API key found."
+            echo "Set at least one secret: ANTHROPIC_API_KEY, OPENAI_API_KEY, or GOOGLE_GENERATIVE_AI_API_KEY."
+            exit 1
+          fi
+
+      - name: Run OpenCode steward review
+        env:
+          OPENCODE_AGENT: steward
+          OPENCODE_MODEL: ${{ vars.OPENCODE_MODEL != '' && vars.OPENCODE_MODEL || 'anthropic/claude-sonnet-4-20250514' }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          GOOGLE_GENERATIVE_AI_API_KEY: ${{ secrets.GOOGLE_GENERATIVE_AI_API_KEY }}
+        run: ./scripts/opencode-review.sh
+
+      - name: Add report to job summary
+        if: always()
+        run: |
+          if [[ -f .opencode/reports/opencode-review.md ]]; then
+            cat .opencode/reports/opencode-review.md >> "${GITHUB_STEP_SUMMARY}"
+          else
+            echo "OpenCode report was not generated." >> "${GITHUB_STEP_SUMMARY}"
+          fi
+
+      - name: Upload OpenCode report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: opencode-review-report
+          path: .opencode/reports/opencode-review.md
+          if-no-files-found: warn

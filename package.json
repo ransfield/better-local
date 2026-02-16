@@ -10,6 +10,7 @@
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
     "site:validate": "node scripts/validate-content.mjs",
+    "seo:check": "node scripts/seo-check.mjs",
     "test:e2e": "playwright test"
   },
   "dependencies": {

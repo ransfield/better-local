@@ -83,6 +83,7 @@ This repo includes:
 - `pnpm typecheck` - TS check
 - `pnpm build` - build
 - `pnpm site:validate` - verify required content files
+- `pnpm seo:check` - lightweight SEO/content guardrails
 - `pnpm test:e2e` - Playwright smoke test (optional; runs in CI)
 
 ## Notes

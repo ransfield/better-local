@@ -1,0 +1,10 @@
+{
+  "repo_type": "nextjs",
+  "lenses": {
+    "always": ["engineering", "reuse", "project-layout"],
+    "by_repo_type": {
+      "nextjs": ["nextjs"]
+    },
+    "extra": []
+  }
+}
