@@ -14,9 +14,9 @@ async function readMdx(slug: string) {
 export async function renderMdxPage(slug: string) {
   const source = await readMdx(slug)
   return (
-    <div className="prose prose-neutral container py-12">
+    <article className="prose prose-neutral w-full max-w-none">
       <MDXRemote source={source} components={mdxComponents} options={{ blockJS: false }} />
-    </div>
+    </article>
   )
 }
 

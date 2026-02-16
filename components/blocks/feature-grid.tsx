@@ -1,13 +1,20 @@
-import { Card } from '@/components/ui/card'
+import { cn } from '@/components/ui/cn'
 
-export function FeatureGrid(props: { items: { title: string; body: string }[] }) {
+export function FeatureGrid(props: { items: { title: string; body: string }[]; columns?: 2 | 3; compact?: boolean }) {
+  const columns = props.columns ?? 2
+
   return (
-    <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+    <div className={cn('grid gap-4', columns === 3 ? 'sm:grid-cols-2 lg:grid-cols-3' : 'sm:grid-cols-2')}>
       {props.items.map((it) => (
-        <Card key={it.title}>
-          <h3 className="text-lg font-semibold">{it.title}</h3>
-          <p className="mt-2 text-neutral-700">{it.body}</p>
-        </Card>
+        <article
+          key={it.title}
+          className="card-surface stagger-item p-8"
+        >
+          <h3 className="font-display text-base font-semibold leading-tight text-[var(--color-dark)]">
+            {it.title}
+          </h3>
+          <p className="mt-2 text-sm leading-relaxed text-[var(--color-text-secondary)]">{it.body}</p>
+        </article>
       ))}
     </div>
   )

@@ -19,6 +19,13 @@ const SiteSchema = z.object({
     toEmail: z.string().email()
   }),
   nav: z.array(NavItem),
+  social: z
+    .object({
+      facebook: z.string().url().optional(),
+      instagram: z.string().url().optional(),
+      linkedin: z.string().url().optional()
+    })
+    .optional(),
   seo: z.object({
     siteUrl: z.string().url(),
     defaultTitle: z.string(),

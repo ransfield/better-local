@@ -8,14 +8,14 @@ type Props = React.ButtonHTMLAttributes<HTMLButtonElement> & {
 
 export function Button({ className, variant = 'primary', href, ...props }: Props) {
   const base =
-    'inline-flex items-center justify-center rounded-xl px-4 py-2 text-sm font-medium transition focus:outline-none focus:ring-2 focus:ring-offset-2'
+    'inline-flex items-center justify-center no-underline focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-[var(--color-bg)]'
 
   const styles =
     variant === 'primary'
-      ? 'bg-black text-white hover:bg-neutral-800 focus:ring-black'
+      ? 'btn-primary focus:ring-[var(--color-accent)]'
       : variant === 'secondary'
-        ? 'bg-neutral-100 text-black hover:bg-neutral-200 focus:ring-neutral-400'
-        : 'bg-transparent text-black hover:bg-neutral-100 focus:ring-neutral-400'
+        ? 'btn-secondary focus:ring-[var(--color-accent)]'
+        : 'rounded-[10px] bg-transparent px-4 py-2.5 text-[15px] font-medium text-[var(--color-dark)] transition hover:bg-[var(--color-accent-light)] focus:ring-[var(--color-accent)]'
 
   if (href) {
     return (
